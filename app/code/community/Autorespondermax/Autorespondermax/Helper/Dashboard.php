@@ -25,8 +25,9 @@ class Autorespondermax_Autorespondermax_Helper_Dashboard extends Mage_Core_Helpe
         'character_set' => $store->getConfig('api/config/charset'),
         'currency' => $store->getDefaultCurrencyCode(),
         'virtual_time_zone_id' => $store->getConfig('general/locale/timezone'),
-        'platform_type' => 'MagentoStore',
-        'magento_store' => array(
+        'platform_type' => 'Magento1Store',
+        'magento1_store' => array(
+          'virtual_type' => 'Magento1Store',
           'host_name' => $url['host'],
           'relative_base_url' => $url['path'],
           'media_host_name' => $mediaUrl['host'],
@@ -41,8 +42,8 @@ class Autorespondermax_Autorespondermax_Helper_Dashboard extends Mage_Core_Helpe
       )
     );
     if($secureUrl['scheme'] === 'https') {
-      $body['store']['magento_store']['secure_host_name'] = $secureUrl['host'];
-      $body['store']['magento_store']['secure_relative_base_url'] = $secureUrl['path'];
+      $body['store']['magento1_store']['secure_host_name'] = $secureUrl['host'];
+      $body['store']['magento1_store']['secure_relative_base_url'] = $secureUrl['path'];
     }
     
     //POST to dashboard
