@@ -22,6 +22,7 @@ class Autorespondermax_Autorespondermax_Model_Customer_Api extends Autoresponder
       $customerResult = $this->_toArray($customer, self::$ATTRIBUTE_FILTERS);
       
       //Subscriber
+      //Now there is a separate API endpoint to do this, but will be left
       $subscriber = Mage::getModel('newsletter/subscriber')->loadByCustomer($customer);
       if(!is_null($subscriber)) {
         $subscriberResult = $this->_toArray($subscriber, self::$SUBSCRIBER_ATTRIBUTE_FILTERS);

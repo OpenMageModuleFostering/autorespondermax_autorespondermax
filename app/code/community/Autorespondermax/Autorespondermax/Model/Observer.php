@@ -20,4 +20,16 @@ class Autorespondermax_Autorespondermax_Model_Observer {
       }
     }
   }
+  
+  /**
+  * Observe changes to `Mage_Newsletter_Model_Subcriber` and record them under `Autorespondermax_Autorespondermax_Model_Subscriber`
+  *
+  * @param  Varien_Event_Observer $observer
+  */
+  public function updateSubscriber($observer) {
+    $subscriber = $observer->getSubscriber();
+    $_subscriber = Mage::getModel('autorespondermax/subscriber')->loadBySubscriber($subscriber);
+    $_subscriber->setUpdatedAt(Mage::getSingleton('core/date')->gmtDate());
+    $_subscriber->save();
+  }
 }

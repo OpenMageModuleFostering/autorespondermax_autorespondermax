@@ -91,6 +91,7 @@ class Autorespondermax_Autorespondermax_Model_System_Config_ConnectOrDisconnect 
             
       $helper->setStoreId($storeId, $store);
       $helper->setToken($storeToken, $store);
+Mage::log($storeApiSecret, Zend_Log::ERR);
       $helper->setApiSecret($storeApiSecret, $store);
       $helper->setUseTracking(true, $store);
     }

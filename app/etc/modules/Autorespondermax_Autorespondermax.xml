@@ -10,6 +10,7 @@
         <Mage_Customer/>
         <Mage_Checkout/>
         <Mage_Catalog/>
+        <Mage_Newsletter/>
       </depends>
     </Autorespondermax_Autorespondermax>
   </modules>

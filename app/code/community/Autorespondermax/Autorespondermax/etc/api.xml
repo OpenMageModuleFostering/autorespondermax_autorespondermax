@@ -14,7 +14,6 @@
           </info>
         </methods>
       </autorespondermax_general>
-      
       <autorespondermax_sales_quote module="autorespondermax" translate="title">
         <title>Autoresponder Max</title>
         <acl>autorespondermax/sales_quote</acl>
@@ -46,7 +45,6 @@
           </page_out_of_range>
         </faults>
       </autorespondermax_sales_quote>
-      
       <autorespondermax_customer module="autorespondermax" translate="title">
         <title>Autoresponder Max</title>
         <acl>autorespondermax/customer</acl>
@@ -78,7 +76,37 @@
           </page_out_of_range>
         </faults>
       </autorespondermax_customer>
-      
+      <autorespondermax_subscriber module="autorespondermax" translate="title">
+        <title>Autoresponder Max</title>
+        <acl>autorespondermax/subscriber</acl>
+        <model>autorespondermax/subscriber_api</model>
+        <methods>
+          <list module="autorespondermax" translate="title">
+            <title>Retrieve subscribers</title>
+            <method>items</method>
+            <acl>autorespondermax/subscriber/list</acl>
+          </list>
+          <ids module="autorespondermax" translate="title">
+            <title>Retrieve IDs</title>
+            <method>ids</method>
+            <acl>autorespondermax/subscriber/ids</acl>
+          </ids>
+        </methods>
+        <faults module="autorespondermax">
+          <store_id_invalid>
+            <code>101</code>
+            <message>Store Id not found</message>
+          </store_id_invalid>
+          <filters_invalid>
+            <code>102</code>
+            <message>Invalid filters specified. Details in error message.</message>
+          </filters_invalid>
+          <page_out_of_range>
+            <code>103</code>
+            <message>Page out of range</message>
+          </page_out_of_range>
+        </faults>
+      </autorespondermax_subscriber>
       <autorespondermax_product module="autorespondermax" translate="title">
         <title>Autoresponder Max</title>
         <acl>autorespondermax/product</acl>
@@ -110,7 +138,6 @@
           </page_out_of_range>
         </faults>
       </autorespondermax_product>
-      
       <autorespondermax_sales_order module="autorespondermax" translate="title">
         <title>Autoresponder Max</title>
         <acl>autorespondermax/sales_order</acl>
@@ -171,6 +198,15 @@
               <title>View IDs</title>
             </ids>
           </customer>
+          <subscriber module="autorespondermax" translate="title">
+            <title>Subscriber</title>
+            <list module="autorespondermax" translate="title">
+              <title>View All</title>
+            </list>
+            <ids module="autorespondermax" translate="title">
+              <title>View IDs</title>
+            </ids>
+          </subscriber>
           <product module="autorespondermax" translate="title">
             <title>Product</title>
             <list module="autorespondermax" translate="title">

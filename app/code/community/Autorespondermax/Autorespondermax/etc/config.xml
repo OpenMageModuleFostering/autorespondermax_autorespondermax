@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Autorespondermax_Autorespondermax>
-      <version>12.0.10</version>
+      <version>12.3.5</version>
     </Autorespondermax_Autorespondermax>
   </modules>
   <global>
@@ -19,8 +19,35 @@
     <models>
       <autorespondermax>
         <class>Autorespondermax_Autorespondermax_Model</class>
+        <resourceModel>autorespondermax_resource</resourceModel>
       </autorespondermax>
+      <autorespondermax_resource>
+        <class>Autorespondermax_Autorespondermax_Model_Mysql4</class>
+        <entities>
+          <subscriber>
+            <table>autorespondermax_subscriber</table>
+          </subscriber>
+        </entities>
+      </autorespondermax_resource>
     </models>
+    <resources>
+      <autorespondermax_setup>
+        <setup>
+          <module>Autorespondermax_Autorespondermax</module>
+        </setup>
+      </autorespondermax_setup>
+    </resources>
+    <events>
+      <newsletter_subscriber_save_commit_after>
+        <observers>
+          <autorespondermax_observer_subscriber>
+            <type>singleton</type>
+            <class>Autorespondermax_Autorespondermax_Model_Observer</class>
+            <method>updateSubscriber</method>
+          </autorespondermax_observer_subscriber>
+        </observers>
+      </newsletter_subscriber_save_commit_after>
+    </events>
   </global>
   <default>
     <autorespondermax>

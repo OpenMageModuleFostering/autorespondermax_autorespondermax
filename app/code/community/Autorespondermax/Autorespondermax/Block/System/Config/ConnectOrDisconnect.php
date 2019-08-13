@@ -38,6 +38,7 @@ class Autorespondermax_Autorespondermax_Block_System_Config_ConnectOrDisconnect 
       
         try{
           $('autorespondermax_settings_connect_disconnect[connecting]').enable();
+          $('autorespondermax_credentials_api_secret').disable();
         } catch(e){}
       })($(this));
       return true;
