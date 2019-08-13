@@ -38,7 +38,29 @@ class Autorespondermax_Autorespondermax_Model_Api extends Mage_Api_Model_Resourc
       }
     }
     
+    //Cleanup any invalid data
+    $this->_removeInvalidUTF8($result);
+    
     return $result;
+  }
+  
+  /**
+  * @param array $array
+  * @return array
+  */
+  protected function _removeInvalidUTF8(&$array) {
+    foreach($array as $key => $value) {
+      if(is_array($value)) {
+        $this->_removeInvalidUTF8($value);
+      }
+      elseif(is_string($value)) {
+        #Check for valid UTF-8 characters
+        #See http://stackoverflow.com/questions/6723562/how-to-detect-malformed-utf-8-string-in-php
+        if(!preg_match('//u', $value)) {
+          $array[$key] = null;
+        }
+      }
+    }
   }
   
   protected function _getStore($storeId) {
