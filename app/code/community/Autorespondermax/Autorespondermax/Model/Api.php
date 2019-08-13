@@ -8,7 +8,7 @@ class Autorespondermax_Autorespondermax_Model_Api extends Mage_Api_Model_Resourc
     $filters = $this->parseFilters($filters);
     try {
       foreach ($filters as $field => $value) {
-       $collection->addFieldToFilter($field, $value);
+        $collection->addFieldToFilter($field, $value);
       }
     }
     catch(Mage_Core_Exception $e) {
@@ -27,7 +27,7 @@ class Autorespondermax_Autorespondermax_Model_Api extends Mage_Api_Model_Resourc
   * @param Mage_Core_Model_Abstract $object
   * @param array $filters list of attribute names to exclude
   */
-  protected function _toArray($object, $filters = array()) {
+  protected function _toArray(&$object, $filters = array()) {
     $result = array();
     
     if(is_object($object)) {
