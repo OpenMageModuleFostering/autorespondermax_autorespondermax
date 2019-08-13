@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<config>
+  <sections>
+    <autorespondermax translate="label" module="autorespondermax">
+      <label><![CDATA[<span style="color:#9EBCD5;display:inline;padding:0;">autoresponder</span><span style="color:#A3BC28;display:inline;padding:0;">max</span>]]></label>
+      <tab>general</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>9999</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+        <no_store_selected translate="label comment">
+          <label>Settings</label>
+          <comment><![CDATA[Please select a store from the <i>Current Configuration Scope</i> first.]]></comment>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>0</show_in_store>
+          <expanded>1</expanded>
+        </no_store_selected>
+        <settings translate="label comment">
+          <label>Settings</label>
+          <comment><![CDATA[<i>Automatic email remarketing made easy</i>]]></comment>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>0</show_in_default>
+          <show_in_website>0</show_in_website>
+          <show_in_store>1</show_in_store>
+          <expanded>1</expanded>
+          <fields>
+            <connect_disconnect translate="label">
+              <label>Status</label>
+              <comment/>
+              <frontend_type>fieldset</frontend_type>
+              <frontend_model>autorespondermax/system_config_connectOrDisconnect</frontend_model>
+              <backend_model>autorespondermax/system_config_connectOrDisconnect</backend_model>
+              <sort_order>1</sort_order>
+              <show_in_default>0</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>1</show_in_store>
+            </connect_disconnect>
+          </fields>
+        </settings>
+        <credentials translate="label">
+          <label>Credentials</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>2</sort_order>
+          <show_in_default>0</show_in_default>
+          <show_in_website>0</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <store_id translate="label">
+              <label>Store Id</label>
+              <frontend_type>text</frontend_type>
+              <frontend_model>autorespondermax/system_config_readonly</frontend_model>
+              <sort_order>1</sort_order>
+              <show_in_default>0</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>1</show_in_store>
+            </store_id>
+            <token translate="label">
+              <label>API User Name</label>
+              <frontend_type>text</frontend_type>
+              <frontend_model>autorespondermax/system_config_readonly</frontend_model>
+              <sort_order>2</sort_order>
+              <show_in_default>0</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>1</show_in_store>
+            </token>
+            <api_secret translate="label">
+              <label>API Password</label>
+              <frontend_type>text</frontend_type>
+              <frontend_model>autorespondermax/system_config_readonly</frontend_model>
+              <sort_order>3</sort_order>
+              <show_in_default>0</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>1</show_in_store>
+            </api_secret>
+            <use_tracking translate="label">
+              <label>Using Advanced Tracking?</label>
+              <frontend_type>select</frontend_type>
+              <frontend_model>autorespondermax/system_config_readonly</frontend_model>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>4</sort_order>
+              <show_in_default>0</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>1</show_in_store>
+            </use_tracking>
+          </fields>
+        </credentials>
+      </groups>
+    </autorespondermax>
+  </sections>
+</config>

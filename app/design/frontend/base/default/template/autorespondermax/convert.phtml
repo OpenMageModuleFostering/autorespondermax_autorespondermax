@@ -1,0 +1,19 @@
+<?php
+if($this->useTracking()) {
+  $order = $this->getOrder();
+  if(!is_null($order)) {
+    ?>
+    <!-- Autoresponder Max Tracking -->
+    <div style="display:none;"><div id="__atrspmx_o"><?php echo $order->getId(); ?></div><div id="__atrspmx_e"><?php echo $this->getEmail(); ?></div><div id="__atrspmx_f"><?php echo $this->getFirstname(); ?></div><div id="__atrspmx_l"><?php echo $this->getLastname(); ?></div><div id="__atrspmx_t"><?php echo $order->getGrandTotal(); ?></div></div>
+    <script type="text/javascript">
+    (function(){
+      var am = document.createElement('script'); am.type = 'text/javascript'; am.async = true; am.src = '<?php echo $this->getMyHelper()->jsQuoteEscape($this->getUri()); ?>';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(am, s);
+    })();
+    </script>
+    <noscript><img src="<?php echo $this->getUri(null); ?>/<?php echo urlencode($order->getId()); ?>/<?php echo urlencode($order->getGrandTotal()); ?>.gif" alt="" /></noscript>
+    <!-- -->
+    <?php
+  }
+}
+?>

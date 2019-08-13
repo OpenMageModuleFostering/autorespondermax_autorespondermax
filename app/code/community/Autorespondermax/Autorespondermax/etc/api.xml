@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<config>
+  <api>
+    <resources>
+      <autorespondermax_general module="autorespondermax" translate="title">
+        <title>Autoresponder Max</title>
+        <acl>autorespondermax/general</acl>
+        <model>autorespondermax/general_api</model>
+        <methods>
+          <info module="autorespondermax" translate="title">
+            <title>Get info about current Magento installation</title>
+            <method>info</method>
+            <acl>autorespondermax/general/info</acl>
+          </info>
+        </methods>
+      </autorespondermax_general>
+      
+      <autorespondermax_sales_quote module="autorespondermax" translate="title">
+        <title>Autoresponder Max</title>
+        <acl>autorespondermax/sales_quote</acl>
+        <model>autorespondermax/sales_quote_api</model>
+        <methods>
+          <list module="autorespondermax" translate="title">
+            <title>Retrieve carts</title>
+            <method>items</method>
+            <acl>autorespondermax/sales_quote/list</acl>
+          </list>
+          <ids module="autorespondermax" translate="title">
+            <title>Retrieve IDs</title>
+            <method>ids</method>
+            <acl>autorespondermax/sales_quote/ids</acl>
+          </ids>
+        </methods>
+        <faults module="autorespondermax">
+          <store_id_invalid>
+            <code>101</code>
+            <message>Store Id not found</message>
+          </store_id_invalid>
+          <filters_invalid>
+            <code>102</code>
+            <message>Invalid filters specified. Details in error message.</message>
+          </filters_invalid>
+          <page_out_of_range>
+            <code>103</code>
+            <message>Page out of range</message>
+          </page_out_of_range>
+        </faults>
+      </autorespondermax_sales_quote>
+      
+      <autorespondermax_customer module="autorespondermax" translate="title">
+        <title>Autoresponder Max</title>
+        <acl>autorespondermax/customer</acl>
+        <model>autorespondermax/customer_api</model>
+        <methods>
+          <list module="autorespondermax" translate="title">
+            <title>Retrieve customers</title>
+            <method>items</method>
+            <acl>autorespondermax/customer/list</acl>
+          </list>
+          <ids module="autorespondermax" translate="title">
+            <title>Retrieve IDs</title>
+            <method>ids</method>
+            <acl>autorespondermax/customer/ids</acl>
+          </ids>
+        </methods>
+        <faults module="autorespondermax">
+          <store_id_invalid>
+            <code>101</code>
+            <message>Store Id not found</message>
+          </store_id_invalid>
+          <filters_invalid>
+            <code>102</code>
+            <message>Invalid filters specified. Details in error message.</message>
+          </filters_invalid>
+          <page_out_of_range>
+            <code>103</code>
+            <message>Page out of range</message>
+          </page_out_of_range>
+        </faults>
+      </autorespondermax_customer>
+      
+      <autorespondermax_product module="autorespondermax" translate="title">
+        <title>Autoresponder Max</title>
+        <acl>autorespondermax/product</acl>
+        <model>autorespondermax/product_api</model>
+        <methods>
+          <list module="autorespondermax" translate="title">
+            <title>Retrieve products</title>
+            <method>items</method>
+            <acl>autorespondermax/product/list</acl>
+          </list>
+          <ids module="autorespondermax" translate="title">
+            <title>Retrieve IDs</title>
+            <method>ids</method>
+            <acl>autorespondermax/product/ids</acl>
+          </ids>
+        </methods>
+        <faults module="autorespondermax">
+          <store_id_invalid>
+            <code>101</code>
+            <message>Store Id not found</message>
+          </store_id_invalid>
+          <filters_invalid>
+            <code>102</code>
+            <message>Invalid filters specified. Details in error message.</message>
+          </filters_invalid>
+          <page_out_of_range>
+            <code>103</code>
+            <message>Page out of range</message>
+          </page_out_of_range>
+        </faults>
+      </autorespondermax_product>
+      
+      <autorespondermax_sales_order module="autorespondermax" translate="title">
+        <title>Autoresponder Max</title>
+        <acl>autorespondermax/sales_order</acl>
+        <model>autorespondermax/sales_order_api</model>
+        <methods>
+          <list module="autorespondermax" translate="title">
+            <title>Retrieve orders</title>
+            <method>items</method>
+            <acl>autorespondermax/sales_order/list</acl>
+          </list>
+          <ids module="autorespondermax" translate="title">
+            <title>Retrieve IDs</title>
+            <method>ids</method>
+            <acl>autorespondermax/sales_order/ids</acl>
+          </ids>
+        </methods>
+        <faults module="autorespondermax">
+          <store_id_invalid>
+            <code>101</code>
+            <message>Store Id not found</message>
+          </store_id_invalid>
+          <filters_invalid>
+            <code>102</code>
+            <message>Invalid filters specified. Details in error message.</message>
+          </filters_invalid>
+          <page_out_of_range>
+            <code>103</code>
+            <message>Page out of range</message>
+          </page_out_of_range>
+        </faults>
+      </autorespondermax_sales_order>
+    </resources>
+    <acl>
+      <resources>
+        <autorespondermax module="autorespondermax" translate="title">
+          <title>Autoresponder Max</title>
+          <general module="autorespondermax" translate="title">
+            <title>Magento info</title>
+            <info module="autorespondermax" translate="title">
+              <title>Retrieve info about current Magento installation</title>
+            </info>
+          </general>
+          <sales_quote module="autorespondermax" translate="title">
+            <title>Shopping Cart</title>
+            <list module="autorespondermax" translate="title">
+              <title>View All</title>
+            </list>
+            <ids module="autorespondermax" translate="title">
+              <title>View IDs</title>
+            </ids>
+          </sales_quote>
+          <customer module="autorespondermax" translate="title">
+            <title>Customer</title>
+            <list module="autorespondermax" translate="title">
+              <title>View All</title>
+            </list>
+            <ids module="autorespondermax" translate="title">
+              <title>View IDs</title>
+            </ids>
+          </customer>
+          <product module="autorespondermax" translate="title">
+            <title>Product</title>
+            <list module="autorespondermax" translate="title">
+              <title>View All</title>
+            </list>
+            <ids module="autorespondermax" translate="title">
+              <title>View IDs</title>
+            </ids>
+          </product>
+          <sales_order module="autorespondermax" translate="title">
+            <title>Order</title>
+            <list module="autorespondermax" translate="title">
+              <title>View All</title>
+            </list>
+            <ids module="autorespondermax" translate="title">
+              <title>View IDs</title>
+            </ids>
+          </sales_order>
+        </autorespondermax>
+      </resources>
+    </acl>
+  </api>
+</config>

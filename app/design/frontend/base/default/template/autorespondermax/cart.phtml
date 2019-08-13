@@ -1,0 +1,15 @@
+<?php
+if($this->useTracking()) {
+  ?>
+  <!-- Autoresponder Max Tracking -->
+  <div style="display:none;"><div id="__atrspmx_t"><?php echo $this->getQuote()->getId(); ?></div><div id="__atrspmx_e"><?php echo $this->getEmail(); ?></div><div id="__atrspmx_f"><?php echo $this->getFirstname(); ?></div><div id="__atrspmx_l"><?php echo $this->getLastname(); ?></div><div id="__atrspmx_c"><?php foreach($this->getQuote()->getAllVisibleItems() as $item) { ?><div class="__atrspmx_cp"><div class="__atrspmx_id"><?php echo $item->getId(); ?></div><div class="__atrspmx_pd"><?php echo $item->getProductId(); ?></div><div class="__atrspmx_q"><?php echo $item->getQty(); ?></div><div class="__atrspmx_p"><?php echo $item->getPrice(); ?></div></div><?php } ?></div></div>
+  <script type="text/javascript">
+  (function(){
+    var am = document.createElement('script'); am.type = 'text/javascript'; am.async = true; am.src = '<?php echo $this->getMyHelper()->jsQuoteEscape($this->getUri()); ?>';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(am, s);
+  })();
+  </script>
+  <!-- -->
+  <?php
+}
+?>

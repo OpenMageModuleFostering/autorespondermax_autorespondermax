@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Autorespondermax_Autorespondermax>
+      <active>true</active>
+      <codePool>community</codePool>
+      <depends>
+        <Mage_Core/>
+        <Mage_Sales/>
+        <Mage_Customer/>
+        <Mage_Checkout/>
+        <Mage_Catalog/>
+      </depends>
+    </Autorespondermax_Autorespondermax>
+  </modules>
+</config>
