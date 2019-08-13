@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Autorespondermax_Autorespondermax>
-      <version>11.0.6</version>
+      <version>12.0.10</version>
     </Autorespondermax_Autorespondermax>
   </modules>
   <global>
@@ -31,13 +31,13 @@
   </default>
   <admin>
     <routers>
-      <autorespondermax>
-        <use>admin</use>
+      <adminhtml>
         <args>
-          <module>Autorespondermax_Autorespondermax</module>
-          <frontName>autorespondermax</frontName>
+          <modules>
+            <autorespondermax after="Mage_Adminhtml">Autorespondermax_Autorespondermax</autorespondermax>
+          </modules>
         </args>
-      </autorespondermax>
+      </adminhtml>
     </routers>
   </admin>
   <adminhtml>

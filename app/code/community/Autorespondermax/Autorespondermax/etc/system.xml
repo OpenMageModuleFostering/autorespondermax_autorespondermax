@@ -72,7 +72,6 @@
             <api_secret translate="label">
               <label>API Password</label>
               <frontend_type>text</frontend_type>
-              <frontend_model>autorespondermax/system_config_readonly</frontend_model>
               <sort_order>3</sort_order>
               <show_in_default>0</show_in_default>
               <show_in_website>0</show_in_website>
