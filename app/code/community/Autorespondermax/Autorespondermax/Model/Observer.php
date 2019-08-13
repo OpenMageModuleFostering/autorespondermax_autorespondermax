@@ -15,7 +15,7 @@ class Autorespondermax_Autorespondermax_Model_Observer {
           $helper->refresh($store);
         }
         catch(Exception $e) {
-          Mage::log($e);
+          Mage::logException($e);
         }
       }
     }

@@ -1,7 +1,7 @@
 <?php
 
 class Autorespondermax_Autorespondermax_Helper_Track extends Mage_Core_Helper_Abstract {
-  const VERSION = '4';
+  const VERSION = 'v5';
   const FORMAT = 'js';
   
   protected $_helper = null;
