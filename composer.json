@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Autorespondermax_Autorespondermax",
+    "name": "OpenMageModuleFostering\/Autorespondermax_Autorespondermax",
     "type": "magento-module",
     "license": "Autoresponder-Max-Terms-Of-Service",
     "homepage": "",
     "description": "Automatic email remarketing made easy",
     "authors": [
-    {
-        "name": "Carson Reinke",
-        "email": "it@autorespondermax.com"
-    }
-],
+        {
+            "name": "Carson Reinke",
+            "email": "it@autorespondermax.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
